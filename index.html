@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/Styles/general.css"> <!-- global css (colors, fonts, ...) -->
-    <link rel="stylesheet" media="screen and (orientation: portrait)" href="Assets/Styles/portrait.css"> <!-- portrait orientation specific css -->
-    <link rel="stylesheet" media="screen and (orientation: landscape)" href="Assets/Styles/landscape.css"> <!-- landscape orientation specific css -->
+    <link rel="stylesheet" href="Assets/Styles/portrait.css">
     <link rel="shortcut icon" href="Assets/Icons/dice.png">
+    <script src="Assets/Scripts/jquery-3.6.1.min.js"></script>
     <title>Space Battle Workshop</title>
 </head>
 <body>
-
+    <div id="dice_window">
+        <div class="dice_container" id="attack_dice">
+            <div class="dice_rows">
+                <div class="die attack_die"><img src="Assets/Sprites/Dice/critic.png"></div>
+                <div class="die attack_die"><img src="Assets/Sprites/Dice/critic.png"></div>
+                <div class="die attack_die"><img src="Assets/Sprites/Dice/critic.png"></div>
+                <div class="die attack_die"><img src="Assets/Sprites/Dice/critic.png"></div>
+                <div class="die attack_die"><img src="Assets/Sprites/Dice/critic.png"></div>
+            </div>
+            <div class="dice_commands">
+                <div class="command_btn remove_die_btn"><img src="Assets/Icons/remove.png"></div>
+                <div class="command_btn roll_dice_btn">Roll the dice!</div>
+                <div class="command_btn add_die_btn"><img src="Assets/Icons/add.png"></div>
+            </div>
+        </div>
+        <div class="dice_container" id="defense_dice">
+            <div class="dice_rows">
+                <div class="die defense_die"><img src="Assets/Sprites/Dice/eye.png"></div>
+                <div class="die defense_die"><img src="Assets/Sprites/Dice/eye.png"></div>
+                <div class="die defense_die"><img src="Assets/Sprites/Dice/eye.png"></div>
+            </div>
+            <div class="dice_row" style="display: none;">
+            </div>
+            <div class="dice_commands">
+                <div class="command_btn remove_die_btn"><img src="Assets/Icons/remove.png"></div>
+                <div class="command_btn roll_dice_btn">Roll the dice!</div>
+                <div class="command_btn add_die_btn"><img src="Assets/Icons/add.png"></div>
+            </div>
+        </div>
+    </div>
+    <script src="Assets/Scripts/source.js"></script>
 </body>
 </html>

@@ -1,0 +1,120 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800;900&display=swap');
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: #222;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Rubik, Geneva, Tahoma, sans-serif;
+    font-size: 4vw;
+}
+
+#dice_window {
+    display: flex;
+    flex-direction: column;
+}
+
+.dice_rows {
+    display: flex;
+    margin: 0 1.5vw 1.5vw 1.5vw;
+    flex-wrap: wrap;
+}
+
+.dice_container {
+    background: #333;
+    box-shadow: 0 0 2vw #000000AA;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8vw;
+    padding: 1.5vw 0 0 0;
+    margin: 4vw;
+    width: 72vw;
+}
+
+.die {
+    box-shadow: 0 0 1vw #000000AA;
+    display: flex;
+    margin: 1.5vw 1.5vw;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 5vw;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s ease-in-out;
+}
+
+.die:active {
+    filter: brightness(1.5);
+    transition: 0.1s ease-in-out;
+}
+
+.attack_die {
+    background: #BB4444;
+}
+
+.defense_die {
+    background: #44BB44;
+}
+
+.die img {
+    width: 16vw;
+    height: 16vw;
+}
+
+.dice_commands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF;
+    border-radius: 5vw;
+    height: 10vw;
+    margin: 0 3vw 3vw 3vw;
+    padding: 0 1vw;
+}
+
+.command_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 0 0 1vh #000000AA;
+    width: fit-content;
+    border-radius: 5vw;
+    height: 8vw;
+    width: 8vw;
+    transition: 0.1s ease-in-out;
+}
+
+.command_btn:active {
+    filter: brightness(1.5);
+    transition: 0.1s ease-in-out;
+}
+
+.command_btn img {
+    height: calc(100% - 4vw);
+}
+
+.remove_die_btn {
+    background: #BB4444;
+}
+
+.add_die_btn {
+    background: #4444BB;
+}
+
+.roll_dice_btn {
+    width: fit-content;
+    padding: 0 4vw;
+}
