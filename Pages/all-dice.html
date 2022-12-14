@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/Styles/portrait.css">
+    <link rel="shortcut icon" href="../Assets/Icons/dice.png">
+    <script src="../Assets/Scripts/jquery-3.6.1.min.js"></script>
+    <title>All Dice</title>
+</head>
+<body>
+    <div id="dice_window">
+        <div class="dice_container">
+            <div class="dice_rows" id="attack_dice">
+                <div class="die attack_die"><img src="../Assets/Sprites/Dice/null.png"></div>
+            </div>
+            <div class="dice_commands">
+                <div class="command_btn remove_die_btn" id="remove_attack_die"><img src="../Assets/Icons/remove.png"></div>
+                <div class="command_btn roll_dice_btn" id="roll_attack_dice">Roll the dice!</div>
+                <div class="command_btn add_die_btn" id="add_attack_die"><img src="../Assets/Icons/add.png"></div>
+            </div>
+        </div>
+        <div class="dice_container">
+            <div class="dice_rows" id="defense_dice">
+                <div class="die defense_die"><img src="../Assets/Sprites/Dice/null.png"></div>
+            </div>
+            <div class="dice_commands">
+                <div class="command_btn remove_die_btn" id="remove_defense_die"><img src="../Assets/Icons/remove.png"></div>
+                <div class="command_btn roll_dice_btn" id="roll_defense_dice">Roll the dice!</div>
+                <div class="command_btn add_die_btn" id="add_defense_die"><img src="../Assets/Icons/add.png"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../Assets/Scripts/source.js"></script>
+</body>
+</html>

@@ -55,11 +55,6 @@ body{
     transition: 0.1s ease-in-out;
 }
 
-.die:active {
-    filter: brightness(1.5);
-    transition: 0.1s ease-in-out;
-}
-
 .attack_die {
     background: #BB4444;
 }
