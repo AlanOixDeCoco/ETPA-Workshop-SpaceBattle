@@ -45,7 +45,8 @@ attackDiceContainer = document.getElementById("attack_dice");
 let defenseDiceContainer;
 defenseDiceContainer = document.getElementById("defense_dice");
 
-let diceCount = 0;
+let attackDiceCount = 0;
+let defenseDiceCount = 0;
 
 function InitDice(){
     // reset dice containers
@@ -57,41 +58,48 @@ function InitDice(){
         AddDie("attack");
         AddDie("defense");
     }
-
-    diceCount = DICE_DEFAULT_AMOUNT;
 }
 
 function AddDie(dieType){
-    if(diceCount < 6){
-        if(dieType == "attack"){
+    if(dieType == "attack"){
+        if(attackDiceCount < 6){
             console.log("add attack die!");
             lst_attackDice.push(attackDieDiv.cloneNode());
             lst_attackDice[lst_attackDice.length - 1].innerHTML = attackDieHtml;
             attackDiceContainer.appendChild(lst_attackDice[lst_attackDice.length - 1]);
+            attackDiceCount++;
         }
-        else if(dieType == "defense"){
+        else console.log("Can't have more than 6 dice!");
+    }
+    else if(dieType == "defense"){
+        if(defenseDiceCount < 6){
             console.log("add defense die!");
             lst_defenseDice.push(defenseDieDiv.cloneNode());
-            lst_defenseDice[lst_attackDice.length - 1].innerHTML = defenseDieHtml;
-            defenseDiceContainer.appendChild(lst_defenseDice[lst_attackDice.length - 1]);
+            lst_defenseDice[lst_defenseDice.length - 1].innerHTML = defenseDieHtml;
+            defenseDiceContainer.appendChild(lst_defenseDice[lst_defenseDice.length - 1]);
+            defenseDiceCount++;
         }
-        diceCount++;
+        else console.log("Can't have more than 6 dice!");
     }
-    else console.log("Can't have more than 6 dice!");
 }
 
 function RemoveDie(dieType){
-    if(diceCount > 1){
-        if(dieType == "attack"){
+    if(dieType == "attack"){
+        if(attackDiceCount > 1){
             attackDiceContainer.removeChild(lst_attackDice[lst_attackDice.length - 1]);
             lst_attackDice.pop();
+            attackDiceCount--;
         }
-        else if(dieType == "defense"){
-            lst_defenseDice.pop();
-        }
-        diceCount--;
+        else console.log("Can't have less than 1 dice!");
     }
-    else console.log("Can't have less than 1 die!");
+    else if(dieType == "defense"){
+        if(defenseDiceCount > 1){
+            defenseDiceContainer.removeChild(lst_defenseDice[lst_defenseDice.length - 1]);
+            lst_defenseDice.pop();
+            defenseDiceCount--;
+        }
+        else console.log("Can't have less than 1 die!");
+    }
 }
 
 function RollDie(die){
